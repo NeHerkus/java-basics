@@ -5,9 +5,11 @@ public class Loops {
     public static void yearToHoursMinutes(int daysPerYear) {
         int hours = 0;
         long minutes = 0;
-        for (int i = 0; i < daysPerYear; i++) {
+        int i = 0;
+        while (i < daysPerYear) {
             hours += 24;
             minutes += 1440;
+            i++;
         }
         System.out.printf("There are %d hours or %d minutes in one year.", hours, minutes);
     }
