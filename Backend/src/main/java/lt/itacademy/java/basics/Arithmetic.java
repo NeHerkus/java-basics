@@ -18,10 +18,12 @@ public class Arithmetic {
 
 
     }
-    public static double calculateCubeVolume(double size){
-        return Math.pow(size,3);
+
+    public static double calculateCubeVolume(double size) {
+        return Math.pow(size, 3);
     }
-    public static double calculateCubePerimeter(double size){
-        return 12*size;
+
+    public static double calculateCubePerimeter(double size) {
+        return 12 * size;
     }
 }

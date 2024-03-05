@@ -3,7 +3,6 @@ package lt.itacademy.java.basics;
 import java.util.*;
 
 
-
 public class Operators {
 
 
@@ -29,7 +28,6 @@ public class Operators {
         System.out.println("Triangle is : " + stringDict.get(stringDictKey));
 
 
-
         //// Task #6
         System.out.println("Please enter distance, current_fuel, fuel_usage, price_per_liter");
 
@@ -39,7 +37,7 @@ public class Operators {
         double fuelUsage = Double.parseDouble(scanner.next());
         double pricePerLiter = Double.parseDouble(scanner.next());
 
-        determineIsPossible(distance,currentFuel,fuelUsage,pricePerLiter);
+        determineIsPossible(distance, currentFuel, fuelUsage, pricePerLiter);
 
         scanner.close();
 
@@ -63,11 +61,11 @@ public class Operators {
         if (currentFuel < 0) {
 
             double fuel_price = (currentFuel * -1) * pricePerLiter;
-            System.out.printf("Destination is in %f. Car is not able to reach the destination. It needs %f liter of fuel more. It will cost %f ", distance, currentFuel*-1, fuel_price);
+            System.out.printf("Destination is in %f. Car is not able to reach the destination. It needs %f liter of fuel more. It will cost %f ", distance, currentFuel * -1, fuel_price);
 
         } else {
 
-            System.out.printf("Destination is in %f. Car is able to reach the destination. It has %f liters of fuel left.", distance, currentFuel);
+            System.out.printf("Destination is in %f. Car is able to reach the destination. It has %f liters of fuel left.",distance,currentFuel );
 
         }
     }
