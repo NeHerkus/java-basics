@@ -3,7 +3,6 @@
 void main () {
     calculateCube(5);
     convertFeetInchCm(2.4F, 4.0F);
-
 }
 
 void calculateCube(int side) {
@@ -15,7 +14,7 @@ void calculateCube(int side) {
 
 void convertFeetInchCm(float feet, float inches) {
     float feetToInches = feet * 12;
-    float totalCm = (float) ((feetToInches + inches) * 2.54);
+    float totalCm = (feetToInches + inches) * 2.54F;
 
     System.out.printf("%.1f feet and %.1f inches = %.3f cm%n", feet, inches, totalCm);
 }
