@@ -29,9 +29,5 @@ class Main {
 
         System.out.println("" + charas + intas + byteas + " " + stringas + " " + floatas + " " + boolas);
 
-
-
-
-
     }
 }
