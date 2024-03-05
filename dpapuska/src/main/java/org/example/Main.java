@@ -1,5 +1,6 @@
 package org.example;
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -12,7 +13,7 @@ public class Main {
         int age = Integer.parseInt(inputValues[2]);
 
         if(inputValues.length >= 3) {
-            System.out.println("Hello my name is " + name + " " + surname + " and I am " + age + " years old. I am attending IT & Data\n" + "Academy 2024!");
+            System.out.printf("Hello my name is %s %s and I am %d years old. I am attending IT & Data\n" + "Academy 2024!", name, surname, age);
         }
 
         int let0 = 3110;
@@ -26,6 +27,5 @@ public class Main {
         boolean let8 = true;
 
         System.out.println(let1 + "" + let0 + " " + let2 + let3 + let4 + let5 + let6 + " " + let7 + " " + let8);
-
     }
 }
