@@ -16,5 +16,27 @@ public class Basics {
         String message = "Hello, my name is " + name + " " + surname + " and I am " + age + " years old. I am attending IT & Data Academy 2024!";
         System.out.println(message);
         scanner.close();
+
+
+    boolean booli = true;
+    int number = 3110;
+    float point = 2.0F;
+    char doublev = 'w';
+    char ha = 'H';
+
+    String randomMessage = String.valueOf(ha) + number + doublev + point + booli;
+    System.out.println(randomMessage);
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
