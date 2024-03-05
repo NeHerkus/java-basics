@@ -6,10 +6,15 @@ public class Loops {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("How many days in a year we have?");
-        int days = scanner.nextInt();
+//        System.out.println("How many days in a year we have?");
+//        int days = scanner.nextInt();
+//
+//        daysToHoursAndMinutes(days);
 
-        daysToHoursAndMinutes(days);
+        System.out.println("Pick a random number:");
+        int number = scanner.nextInt();
+
+        System.out.printf("Factorial of number %d is %d", number, numberToFactorial(number));
     }
     public static void daysToHoursAndMinutes(int days){
         int hours = 0;
@@ -31,5 +36,15 @@ public class Loops {
             days--;
         }
         System.out.printf("There are %d hours or %d minutes in one year", hours, minutes);
+    }
+
+    //Task 9
+    static int numberToFactorial(int number){
+        int factorial = 1;
+        while(number > 0){
+            factorial *= number;
+            number--;
+        }
+        return factorial;
     }
 }
