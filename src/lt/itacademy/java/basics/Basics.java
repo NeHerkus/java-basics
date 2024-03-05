@@ -21,7 +21,10 @@ public class Basics {
         short s = 0;
         float f = 2.0f;
         int i = 3110;
+
         String line = h + String.valueOf(i) + sp + w + String.valueOf(s) + r + String.valueOf(o) + d + sp + f + sp + b;
+        String line1 = "" + h + i +sp + w + s + r + o + d + sp +f +sp + b;
         out.println(line);
+        out.println(line1);
     }
 }
