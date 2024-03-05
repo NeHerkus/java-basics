@@ -14,8 +14,18 @@ public class Basics {
     }
 
     public static void main(String[] args) {
+//        read();
 
-        read();
+        boolean bool = true;
+        byte one = 1;
+        char h = 'H';
+        char w = 'w';
+        char r = 'r';
+        char d = 'd';
+        float fl = 2.0f;
+        int i = 3110;
+        short zero = 0;
+        System.out.println("" + h + i + " " + w + zero + r + one + d + " " + fl + " " + bool);
 
 
     }
