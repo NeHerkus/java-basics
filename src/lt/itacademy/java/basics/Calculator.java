@@ -8,7 +8,7 @@ public class Calculator {
 //        Task 10
         Scanner sc = new Scanner(System.in);
         String decision;
-        while (true){
+        do {
             String shape = sc.nextLine();
             shape = shape.toUpperCase();
 
@@ -41,8 +41,7 @@ public class Calculator {
                     decision = closeCalculator(sc);
                     break;
             }
-            if (!Objects.equals(decision, "yes")){break;}
-        }
+        } while (Objects.equals(decision, "yes"));
     }
 
     public static void calculateRectangle(int first, int second) {
@@ -62,8 +61,7 @@ public class Calculator {
             int sumOfFirstThird = first + third;
             if (sumOfFirstSecond < third || sumOfSecondThird < first || sumOfFirstThird < second) {
                 System.out.println("Triangle is invalid.");
-            }
-            else{
+            } else {
                 int perimeter = first + second + third;
                 double halfPerimeter = (double) (first + second + third) / 2;
                 double area = Math.sqrt(halfPerimeter * (halfPerimeter - first) * (halfPerimeter - second) * (halfPerimeter - third));
@@ -73,16 +71,18 @@ public class Calculator {
             System.out.println("Rectangle edge length can’t be 0 or below.");
         }
     }
-    public static void calculateSquare(int side){
-        if (side > 0){
+
+    public static void calculateSquare(int side) {
+        if (side > 0) {
             int perimeter = side * 4;
             int area = side * side;
             System.out.println("Square perimeter is " + perimeter + " and area is " + area + ".");
+        } else {
+            System.out.println("Square edge length can’t be 0 or below.");
         }
-        else{System.out.println("Square edge length can’t be 0 or below.");}
     }
 
-    public static String closeCalculator(Scanner sc){
+    public static String closeCalculator(Scanner sc) {
         System.out.println("Do you want to run this calculator again? (yes/no)");
         String decision = sc.nextLine();
         return decision.equalsIgnoreCase("yes") ? "yes" : "no";

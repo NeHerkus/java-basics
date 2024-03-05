@@ -20,11 +20,12 @@ public class Art {
             }
             System.out.println();
         }
-        for (int l = 1; l <= height; l++){
-            if (l < height){
+        for (int l = 1; l <= height; l++) {
+            if (l < height) {
                 System.out.print(" ");
+            } else {
+                System.out.print("*");
             }
-            else{System.out.print("*");}
         }
 
     }
