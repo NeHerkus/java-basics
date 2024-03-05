@@ -4,18 +4,32 @@ import java.util.Scanner;
 
 public class Loops {
 
-     static String convertDaysToHoursAndMinutes(int days) {
+//     static String convertDaysToHoursAndMinutes(int days) {
+//
+//        int hours = 0;
+//        int minutes = 0;
+//
+//        for (int i = 1; i <= days; i++) {
+//        hours += 24;
+//
+//            for (int j = 1; j <= 24; j++) {
+//                minutes += 60;
+//            }
+//        }
+//
+//        return "There are " + hours + " hours or " + minutes + " minutes in one year.";
+//    }
 
-        int hours = 0;
-        int minutes = 0;
+    static String convertDays2 (int days) {
+         int hours = 0;
+         int minutes = 0;
+         int day = 1;
 
-        for (int i = 1; i <= days; i++) {
-        hours += 24;
-
-            for (int j = 1; j <= 24; j++) {
-                minutes += 60;
-            }
-        }
+         while (day <= days) {
+             hours += 24;
+             minutes += 24 * 60;
+             day++;
+         }
 
         return "There are " + hours + " hours or " + minutes + " minutes in one year.";
     }
@@ -26,6 +40,6 @@ public class Loops {
 
         System.out.println("Please enter a number of days");
         int input = scanner.nextInt();
-        System.out.println(convertDaysToHoursAndMinutes(input));
+        System.out.println(convertDays2(input));
     }
 }
