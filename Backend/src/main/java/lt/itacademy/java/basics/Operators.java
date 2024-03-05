@@ -19,6 +19,7 @@ public class Operators {
 
         ArrayList<Double> Triangle = new ArrayList<>();
 
+        System.out.println("Please enter 3 triangle sides lengths: ");
         Triangle.add(Double.valueOf(scanner.next()));
         Triangle.add(Double.valueOf(scanner.next()));
         Triangle.add(Double.valueOf(scanner.next()));
@@ -61,11 +62,11 @@ public class Operators {
         if (currentFuel < 0) {
 
             double fuel_price = (currentFuel * -1) * pricePerLiter;
-            System.out.printf("Destination is in %f. Car is not able to reach the destination. It needs %f liter of fuel more. It will cost %f ", distance, currentFuel * -1, fuel_price);
+            System.out.printf("Destination is in %s. Car is not able to reach the destination. It needs %f liter of fuel more. It will cost %s ", distance, currentFuel * -1, fuel_price);
 
         } else {
 
-            System.out.printf("Destination is in %f. Car is able to reach the destination. It has %f liters of fuel left.",distance,currentFuel );
+            System.out.printf("Destination is in %s. Car is able to reach the destination. It has %s liters of fuel left.",distance,currentFuel );
 
         }
     }

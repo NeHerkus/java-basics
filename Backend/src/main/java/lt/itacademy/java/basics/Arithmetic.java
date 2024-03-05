@@ -12,7 +12,10 @@ public class Arithmetic {
 
         double size = Double.parseDouble(scanner.next());
 
-        System.out.println("Volume of the cube is : " + calculateCubeVolume(size) + "\nPerimeter of the cube is: " + calculateCubePerimeter(size));
+        String printString = """
+        Volume of the cube is : %s , Perimeter of the cube is %s
+        """.formatted(calculateCubeVolume(size),calculateCubePerimeter(size));
+        System.out.println(printString);
 
         scanner.close();
 

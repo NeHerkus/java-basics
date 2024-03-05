@@ -17,9 +17,10 @@ public class Basics {
         String name = scanner.next();
         String surname = scanner.next();
         int age = Integer.parseInt(scanner.next());
-
-        System.out.println("Hello my name is " + name + " " + surname + " and I am " + age + " years old. I am attending IT & Data\n" +
-                "Academy 2024!");
+        String printString = """
+                Hello my name is %s %s and I am %s years old. I am attending IT & Data Academy.
+                """.formatted(name,surname,age);
+        System.out.println(printString);
 
         scanner.close();
 
