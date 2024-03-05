@@ -12,7 +12,7 @@ public class Arithmetic {
 
         scanner.nextLine();
         String[] feetAndInches = scanner.nextLine().split(" ");
-        feetAndInchesToCm(Float.valueOf(feetAndInches[0]), Integer.valueOf(feetAndInches[1]));
+        feetAndInchesToCm(Float.parseFloat(feetAndInches[0]), Integer.parseInt(feetAndInches[1]));
     }
 
     static void feetAndInchesToCm(float feet, int inches) {

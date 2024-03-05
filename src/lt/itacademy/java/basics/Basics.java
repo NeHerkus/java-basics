@@ -3,7 +3,7 @@ package lt.itacademy.java.basics;
 import java.util.Scanner;
 
 public class Basics {
-    public static  void main(String args[]) {
+    public static  void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[] input = scanner.nextLine().split(" ");
 
@@ -19,11 +19,11 @@ public class Basics {
         char characterThree = 'r';
         char characterFour = 'd';
 
-        System.out.print(String.valueOf(characterOne) + String.valueOf(num));
+        System.out.print(characterOne + String.valueOf(num));
         System.out.print(" ");
-        System.out.print(String.valueOf(characterTwo) + String.valueOf(byteOne) + String.valueOf(characterThree) + String.valueOf(byteTwo) + String.valueOf(characterFour));
+        System.out.print(characterTwo + String.valueOf(byteOne) + characterThree + String.valueOf(byteTwo) + characterFour);
         System.out.print(" ");
-        System.out.print(String.valueOf(floatNum) + " " + String.valueOf(bool));
+        System.out.print(floatNum + " " + bool);
     }
 
 }

@@ -7,7 +7,10 @@ public class Operators {
         Scanner scanner = new Scanner(System.in);
         String[] edges = scanner.nextLine().split(" ");
 
-        triangleDetermination(Integer.valueOf(edges[0]), Integer.valueOf(edges[1]), Integer.valueOf(edges[2]));
+        triangleDetermination(Integer.parseInt(edges[0]), Integer.parseInt(edges[1]), Integer.parseInt(edges[2]));
+
+        String[] numbers = scanner.nextLine().split(" ");
+        calculateCarTravel(Integer.parseInt(numbers[0]), Integer.parseInt(numbers[1]), Integer.parseInt(numbers[2]), Float.parseFloat(numbers[3]));
     }
 
     static void triangleDetermination(int a, int b, int c) {
@@ -25,5 +28,16 @@ public class Operators {
         }
 
         System.out.println("Triangle is invalid. Sides: " + a + " " + b + " " + c);
+    }
+
+    static void calculateCarTravel(int distance, int fuelInTank, int fuelUsage, float fuelPrice) {
+        float fuelUsed = distance / 100f * fuelUsage;
+        float moreFuelNeeded = fuelUsed - fuelInTank;
+
+        if(fuelUsed > fuelInTank) {
+            System.out.println("Destination is in " + distance + "km. Car is not able to reach the destination. It needs " + moreFuelNeeded + " liter(s) of fuel more. It wil cost " + moreFuelNeeded * fuelPrice);
+        } else {
+            System.out.println("Destination is in " + distance + "km. Car is able to reach the destination. It will have " + (fuelInTank - fuelUsed) + "liter(s) of fuel left.");
+        }
     }
 }
