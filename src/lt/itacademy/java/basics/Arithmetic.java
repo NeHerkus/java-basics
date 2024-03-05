@@ -2,6 +2,7 @@
 
 void main () {
     calculateCube(5);
+    convertFeetInchCm(2.4F, 4.0F);
 
 }
 
@@ -9,5 +10,12 @@ void calculateCube(int side) {
     int volume = side * side * side;
     int perimeter = side * 12;
 
-    System.out.println(STR."The cube's volume: \{Integer.toString(volume)}, perimeter:  \{Integer.toString(perimeter)}");
+    System.out.printf("The cube's volume: %d, perimeter: %d%n", volume, perimeter);
+}
+
+void convertFeetInchCm(float feet, float inches) {
+    float feetToInches = feet * 12;
+    float totalCm = (float) ((feetToInches + inches) * 2.54);
+
+    System.out.printf("%.1f feet and %.1f inches = %.3f cm%n", feet, inches, totalCm);
 }
