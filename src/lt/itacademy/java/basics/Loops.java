@@ -1,9 +1,15 @@
 package lt.itacademy.java.basics;
 
+import java.util.Scanner;
+
 public class Loops {
     public static void main(String[] args) {
         daysToHoursAndMinutesForLoop(365);
         daysToHoursAndMinutesWhileLoop(365);
+
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+        factorial(input);
     }
 
     static void daysToHoursAndMinutesForLoop(int days) {
@@ -29,5 +35,14 @@ public class Loops {
         }
 
         System.out.println("There are " + hours + " hours or " + minutes + " minutes in one year.");
+    }
+
+    static void factorial(int num) {
+        int result = num;
+        for(int i = num - 1; i > 1; i--){
+            result *= i;
+        }
+
+        System.out.println("Factorial of number " + num + " is " + result + ".");
     }
 }
