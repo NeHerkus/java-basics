@@ -15,10 +15,13 @@ public class Loops
         int hours = 0;
         int minutes = 0;
 
-        for (int i = 0; i < daysPerYear; i++)
+        int i = 0;
+        while (i < daysPerYear)
         {
             hours += 24;
             minutes += 24 * 60;
+
+            i++;
         }
 
         System.out.println("There are " + hours + " hours or " + minutes + " minutes in one year.");
