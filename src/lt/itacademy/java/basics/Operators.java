@@ -1,5 +1,6 @@
 package lt.itacademy.java.basics;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Operators {
@@ -16,6 +17,20 @@ public class Operators {
         }
     }
 
+    static String carAbilityToDrive(double distance, double tank, double fuelUsage, double fuelPrice) {
+    double fuelConsumption = distance * (fuelUsage / 100);
+    DecimalFormat df = new DecimalFormat("#.##");
+
+    if (tank >= fuelConsumption) {
+        double fuelLeft = tank - fuelConsumption;
+        return "Destination is in " + df.format(distance) + "km. Car is able to reach the destination. It will have " + df.format(fuelLeft) + " liters of fuel left.";
+    } else {
+        double fuelNeeded = fuelConsumption - tank;
+        double price = fuelNeeded * fuelPrice;
+        return "Destination is in " + df.format(distance) + "km. Car is not able to reach the destination. It needs " + df.format(fuelNeeded) + " liter of fuel more. It will cost " + df.format(price);
+        }
+    }
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -24,7 +39,19 @@ public class Operators {
         double side1 = scanner.nextDouble();
         double side2 = scanner.nextDouble();
         double side3 = scanner.nextDouble();
-
         System.out.println("Triangle is " + getTriangleType(side1, side2, side3) + ". Sides: " + (int)side1 + " " + (int)side2 + " " + (int)side3);
+
+
+        System.out.println("Please enter distance");
+        double distance = scanner.nextDouble();
+        System.out.println("Please enter how much fuel does the car have in the tank");
+        double tank = scanner.nextDouble();
+        System.out.println("Please enter car fuel usage per 100km");
+        double fuelUsage = scanner.nextDouble();
+        System.out.println("Please enter fuel price per liter");
+        double fuelPrice = scanner.nextDouble();
+
+        System.out.println(carAbilityToDrive(distance, tank, fuelUsage, fuelPrice));
+
     }
 }
