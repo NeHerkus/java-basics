@@ -20,16 +20,21 @@ public class Basics {
 
 
 
-        char ch = 'H';
-        byte by = 3;
-        int in = 11;
-        short sh = 0;
-        String st = "w0r1d";
-        float fl = 2.0f;
-        boolean bo = true;
-        String strBy = Integer.toString(by);
+        char charH = 'H';
+        byte byteThree = 3;
+        int intEleven = 11;
+        short shortZero = 0;
+        char charW = 'w';
+        int intZero = 0;
+        char charR = 'r';
+        int intOne = 1;
+        char charD = 'd';
+        float floatTwo = 2.0f;
+        boolean booleanTrue = true;
+        String StringChar = Character.toString(charH);
 
-        System.out.println(ch + strBy + in + sh + " " + st + " " + fl + " "+ bo);
+        System.out.println(StringChar + byteThree + intEleven + shortZero + " " +
+                charW + intZero + charR + intOne + charD + " " + floatTwo + " "+ booleanTrue);
     }
 
 }

@@ -21,7 +21,6 @@ public class Arithmetic {
         return convertInchesToCentimeters(allInInches);
     }
 
-
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
