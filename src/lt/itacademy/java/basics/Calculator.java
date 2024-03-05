@@ -48,7 +48,7 @@ public class Calculator {
             return;
         }
 
-        System.out.println("Square perimeter is " + a*4 + " and area is " + a * a);
+        System.out.println("Square perimeter is " + a * 4 + " and area is " + a * a);
     }
 
     static void Triangle(int a, int b) {

@@ -6,11 +6,19 @@ public class Operators {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[] edges = scanner.nextLine().split(" ");
+        int a = Integer.parseInt(edges[0]);
+        int b = Integer.parseInt(edges[1]);
+        int c = Integer.parseInt(edges[2]);
 
-        triangleDetermination(Integer.parseInt(edges[0]), Integer.parseInt(edges[1]), Integer.parseInt(edges[2]));
+        triangleDetermination(a, b, c);
 
         String[] numbers = scanner.nextLine().split(" ");
-        calculateCarTravel(Integer.parseInt(numbers[0]), Integer.parseInt(numbers[1]), Integer.parseInt(numbers[2]), Float.parseFloat(numbers[3]));
+        int distance = Integer.parseInt(numbers[0]);
+        int fuelInTank = Integer.parseInt(numbers[1]);
+        int fuelUsage = Integer.parseInt(numbers[2]);
+        float fuelPrice = Float.parseFloat(numbers[3]);
+
+        calculateCarTravel(distance, fuelInTank, fuelUsage, fuelPrice);
     }
 
     static void triangleDetermination(int a, int b, int c) {
