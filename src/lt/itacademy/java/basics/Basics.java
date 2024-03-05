@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class Basics {
 
-
-
     static Scanner sc = new Scanner(System.in);
 
     public static void main (String[] args){
@@ -21,14 +19,14 @@ public class Basics {
         System.out.printf("%c%d%d%d %s %.1f %b%n", someChar, someInt, someByte,
                           someShort, someString, someFloat, someBoolean);
 
-        //System.out.println(getNameAndAge());
+        System.out.println(getNameAndAge());
     }
 
     public static String getNameAndAge(){
 
         String name = getUserInputString("Enter your first name:");
         while (name.isEmpty()) {
-            name = getUserInputString("Name is empty! Enter your name");
+            name = getUserInputString("Name is empty! Enter your first name");
         }
 
         String surname = getUserInputString("Enter your surname");
@@ -41,8 +39,8 @@ public class Basics {
             age = getUserInputString("Age is empty! Enter your age");
         }
 
-        return "Hello my name is " + name + " " + surname + " and I am " + age + " years old." +
-                " I am attending IT & Data Academy 2024";
+        return String.format("Hello my name is %s %s and I am %s years old." +
+                " I am attending IT & Data Academy 2024",name, surname, age);
     }
 
     public static String getUserInputString(String msg) {
