@@ -14,9 +14,22 @@ public class Operators {
         }
     }
 
+    public static void reachDestination(int dest, int tankLevel, double fuelUsg, double fuelPrice) {
+        double fuelLeft = tankLevel - (double) dest / 100 * fuelUsg;
+        if (fuelLeft >= 0) {
+            System.out.printf("Destination is in %d km. Car is able to reach the destination. It will have %.1f liters of fuel left.", dest, fuelLeft);
+        } else {
+            System.out.printf("Destination is in %d km. Car is not able to reach the destination. It needs %.1f liter of fuel more. It will cost %.2f .", dest, (-fuelLeft), (-fuelLeft) * fuelPrice);
+        }
+    }
+
+
     public static void main(String[] args) {
-        triangleType(8, 8, 8);
-        triangleType(1, 3, 5);
-        triangleType(5, 5, 10);
+//        triangleType(8, 8, 8);
+//        triangleType(1, 3, 5);
+//        triangleType(5, 5, 10);
+
+        reachDestination(110, 25, 7, 1.25);
+
     }
 }
