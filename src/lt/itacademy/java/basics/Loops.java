@@ -26,7 +26,17 @@ public class Loops {
         System.out.println("There are " + hours + " hours or " + minutes + " minutes in one year.");
     }
 
+    public static void factorialCalculator(int number) {
+        long fact = 1;
+        for (int i = 2; i <= number; i++) {
+            fact = fact * i;
+        }
+
+        System.out.println("Factorial of number " + number + " is " + fact + ".");
+    }
+
     public static void main(String[] args) {
-    yearCalculator();
+//    yearCalculator();
+        factorialCalculator(5);
     }
 }
