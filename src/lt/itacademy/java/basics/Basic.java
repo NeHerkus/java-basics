@@ -26,6 +26,10 @@ public class Basic {
     boolean booleanType = true;
     char letter = 'H';
     int number = 3110;
+    float numberFloat = 2.0F;
+    short numberShort = 0;
+
+    System.out.println(letter + Integer.toString(number) + " w" + numberShort + "1rd " + numberFloat + ' ' + booleanType);
 
   }
 }
