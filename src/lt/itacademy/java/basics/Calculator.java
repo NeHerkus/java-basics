@@ -7,34 +7,41 @@ public class Calculator {
     public static void main(String[] args) {
 //        Task 10
         Scanner sc = new Scanner(System.in);
-        String decision = "yes";
-        while (Objects.equals(decision, "yes")){
+        String decision;
+        while (true){
             String shape = sc.nextLine();
+            shape = shape.toUpperCase();
 
-            switch (shape.toUpperCase()) {
+            switch (shape) {
                 case "RECTANGLE":
                     int firstSide = sc.nextInt();
                     int secondSide = sc.nextInt();
+                    sc.nextLine();
                     calculateRectangle(firstSide, secondSide);
+                    decision = closeCalculator(sc);
                     break;
 
                 case "TRIANGLE":
                     int firstSideT = sc.nextInt();
                     int secondSideT = sc.nextInt();
                     int thirdSideT = sc.nextInt();
+                    sc.nextLine();
                     calculateTriangle(firstSideT, secondSideT, thirdSideT);
+                    decision = closeCalculator(sc);
                     break;
 
                 case "SQUARE":
                     int side = sc.nextInt();
+                    sc.nextLine();
                     calculateSquare(side);
+                    decision = closeCalculator(sc);
                     break;
                 default:
-                    System.out.println("Do you want to run this calculator again? (yes/no)");
-                    decision = sc.nextLine();
+                    System.out.println("Please enter a valid shape");
+                    decision = closeCalculator(sc);
                     break;
             }
-
+            if (!Objects.equals(decision, "yes")){break;}
         }
     }
 
@@ -73,6 +80,12 @@ public class Calculator {
             System.out.println("Square perimeter is " + perimeter + " and area is " + area + ".");
         }
         else{System.out.println("Square edge length can’t be 0 or below.");}
+    }
+
+    public static String closeCalculator(Scanner sc){
+        System.out.println("Do you want to run this calculator again? (yes/no)");
+        String decision = sc.nextLine();
+        return decision.equalsIgnoreCase("yes") ? "yes" : "no";
     }
 
 }
