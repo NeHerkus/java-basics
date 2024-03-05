@@ -39,12 +39,6 @@ public class Basics {
 
 }
 
-//    boolean
-//    byte
-//    char
-//    int
-//    long
-//    short
 
 
 
