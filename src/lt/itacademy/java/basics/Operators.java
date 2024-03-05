@@ -54,7 +54,7 @@ public class Operators {
     //task6
     static void driveToDestination(int distanceToDestination, int fuelInTheTank, int fuelUsagePer100km, double fuelPricePerLiter) {
         double fuelLeft = fuelInTheTank - ((double) (distanceToDestination * fuelUsagePer100km) /100);
-        System.out.println("liko kuro: " +fuelLeft);
+
         if (fuelLeft>=0) {
             System.out.println("Destination is in " + distanceToDestination + " km. Car is able to reach the destination. It will have "+ fuelLeft+" liters of\n" +
                     "    fuel left.");
