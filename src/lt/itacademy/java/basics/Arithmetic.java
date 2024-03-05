@@ -3,6 +3,10 @@ package lt.itacademy.java.basics;
 import java.util.Scanner;
 
 public class Arithmetic {
+    public static void main(String[] args) {
+        cube();
+        convertToCentimeters();
+    }
     static Scanner sc = new Scanner(System.in);
 
     public static void cube() {
@@ -24,9 +28,4 @@ public class Arithmetic {
 
     }
 
-    public static void main(String[] args) {
-//        cube();
-        convertToCentimeters();
-
-    }
 }
