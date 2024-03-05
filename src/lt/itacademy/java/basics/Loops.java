@@ -6,6 +6,29 @@ public class Loops
 {
     public static void main(String[] args)
     {
+        // DoTaskEight();
+        DoTaskNine();
+    }
+
+    private static void DoTaskNine()
+    {
+        System.out.println("Enter a number:");
+
+        var scanner = new Scanner(System.in);
+        var rawInput = scanner.nextLine();
+        var number = Integer.parseInt(rawInput);
+
+        var factorial = 1;
+        for (int i = 1; i <= number; i++)
+        {
+            factorial *= i;
+        }
+
+        System.out.println("Factorial of number " + number + " is " + factorial);
+    }
+
+    private static void DoTaskEight()
+    {
         System.out.println("Enter days per year:");
 
         var scanner = new Scanner(System.in);
