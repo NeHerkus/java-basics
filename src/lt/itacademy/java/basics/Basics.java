@@ -4,10 +4,24 @@ import java.util.Scanner;
 
 public class Basics {
 
+
+
     static Scanner sc = new Scanner(System.in);
 
     public static void main (String[] args){
-        System.out.println(getNameAndAge());
+
+        char someChar = 'H';
+        int someInt = 3;
+        byte someByte = 1;
+        short someShort = 10;
+        String someString = "W0r1d";
+        float someFloat = 2.0F;
+        boolean someBoolean = true;
+
+        System.out.printf("%c%d%d%d %s %.1f %b%n", someChar, someInt, someByte,
+                          someShort, someString, someFloat, someBoolean);
+
+        //System.out.println(getNameAndAge());
     }
 
     public static String getNameAndAge(){
@@ -27,7 +41,8 @@ public class Basics {
             age = getUserInputString("Age is empty! Enter your age");
         }
 
-        return "Hello my name is " + name + " " + surname + " and I am " + age + " years old. I am attending IT & Data Academy 2024";
+        return "Hello my name is " + name + " " + surname + " and I am " + age + " years old." +
+                " I am attending IT & Data Academy 2024";
     }
 
     public static String getUserInputString(String msg) {
