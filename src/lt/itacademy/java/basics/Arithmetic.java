@@ -1,5 +1,4 @@
 package lt.itacademy.java.basics;
-import java.util.Arrays;
 import java.util.Scanner;
 import static java.lang.System.*;
 public class Arithmetic {
