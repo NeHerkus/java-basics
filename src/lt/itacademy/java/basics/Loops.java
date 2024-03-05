@@ -42,6 +42,8 @@ public class Loops {
       total *= i;
     }
     System.out.println(total);
+
+
   }
 
   }
