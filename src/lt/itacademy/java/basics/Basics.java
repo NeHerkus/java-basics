@@ -13,9 +13,34 @@ public class Basics {
         System.out.println("Enter age:");
         int myAge = scanner.nextInt();
 
-        System.out.println("Hello my name is " +
-                myName + " " +
-                mySurname + " and I am " +
-                myAge + " years old. I am attending IT & Data Academy 2024!");
+//        System.out.println("Hello my name is " +
+//                myName + " " +
+//                mySurname + " and I am " +
+//                myAge + " years old. I am attending IT & Data Academy 2024!");
+
+        System.out.printf("""
+                Hello my name is %s %s and I am %s years old. I am attending IT & Data Academy 2024!
+                """, myName, mySurname, myAge);
+
+        char hLetter = 'H';
+        int numbOne = 1;
+        byte numbThree = 3;
+        short numbZero = 0;
+        char space = ' ';
+        char wLetter = 'w';
+        char rLetter = 'r';
+        char dLetter = 'd';
+        float twoPointO = 2.0f;
+        boolean ofCourse = true;
+
+        String hello = String.valueOf(hLetter) + numbThree + numbOne + numbOne + numbZero + space +
+                wLetter + numbZero + rLetter + numbOne + dLetter + space +
+                twoPointO + space + ofCourse;
+
+        System.out.println(hello);
+        scanner.close();
+        System.out.println("Scanner closed");
+
     }
+
 }
