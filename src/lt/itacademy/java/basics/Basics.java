@@ -10,15 +10,13 @@ public class Basics {
         char lchar = 'H';
         boolean lbool = true;
         String lstring = " w0r1d ";
-        // String task2 = lchar+lbyte+lshort+lint+lstring+lfloat +' '+lbool;
-        System.out.println(lchar+lbyte+lshort+lint+lstring+lfloat +' '+lbool);
+        String task2 = lchar + lbyte + lshort + lint + lstring + lfloat + ' ' + lbool;
+        System.out.println(task2);
 
         String name = "Gabija";
         String surname = "Sabeckyte";
         int age = 23;
         System.out.println("Hello my name is " + name + " " + surname + " and I'm " + age + " years old. I am attending IT & Data\n" +
                 "Academy 2024!");
-
     }
-
 }
