@@ -1,3 +1,4 @@
+
 void main() {
 
     System.out.println(determineTriangleType(5, 2, 3));
@@ -33,12 +34,13 @@ String checkIfCanReachDestination(float distance, float fuelInTank, float fuelUs
                 Additional fuel cost: %.2f
                 """, distance, fuelToTopUp, topUpCost);
     } else {
-        float fuelLeftAfterDest = fuelInTank - fuelNeeded;
+        float fuelLeftAtDest = fuelInTank - fuelNeeded;
 
         return String.format("""
                 Destination is in %.1f km.
                 Car is able to reach the destination.
                 It will have %.1f liters of fuel left.
-                """, distance, fuelLeftAfterDest);
+                """, distance, fuelLeftAtDest);
     }
 }
+
