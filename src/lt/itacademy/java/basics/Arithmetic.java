@@ -6,7 +6,8 @@ public class Arithmetic
 {
     public static void main(String[] args)
     {
-        DoTaskThree();
+        // DoTaskThree();
+        DoTaskFour();
     }
 
     private static void DoTaskThree()
@@ -34,5 +35,28 @@ public class Arithmetic
     private static int GetPerimeter(int input)
     {
         return input * 12;
+    }
+
+    private static void DoTaskFour()
+    {
+        System.out.println("Please enter feet and inches separated by a space:2.4 2");
+
+        var scanner = new Scanner(System.in);
+        var rawInput = scanner.nextLine();
+        var inputs = rawInput.split("\\s+");
+
+        if (inputs.length != 2) return;
+
+        var feet = Double.parseDouble(inputs[0]);
+        var inches = Double.parseDouble(inputs[1]);
+
+        var centimeters = ConvertImperialToMetric(feet, inches);
+
+        System.out.println(feet + " feet and " + inches + " inches = " + centimeters + " cm");
+    }
+
+    private static double ConvertImperialToMetric(double feet, double inches)
+    {
+        return (feet * 12 + inches) * 2.54;
     }
 }
