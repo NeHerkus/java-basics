@@ -27,7 +27,6 @@ public class Basics {
         String st = "w0r1d";
         float fl = 2.0f;
         boolean bo = true;
-
         String strBy = Integer.toString(by);
 
         System.out.println(ch + strBy + in + sh + " " + st + " " + fl + " "+ bo);
