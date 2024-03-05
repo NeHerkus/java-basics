@@ -22,8 +22,6 @@ public class Basics {
         int age = scanner.nextInt();
 
         return "Hello my name is " + name + " " + surname + " and I am " + age + " years old. I am attending IT & Data Academy 2024!";
-
-
     }
 
 }
