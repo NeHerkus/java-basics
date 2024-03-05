@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Basics {
     public static void main(String[] args) {
-        System.out.println(firstTaskResult());
+        System.out.println(secondTaskResult());
 
     }
 
@@ -22,6 +22,19 @@ public class Basics {
         int age = scanner.nextInt();
 
         return "Hello my name is " + name + " " + surname + " and I am " + age + " years old. I am attending IT & Data Academy 2024!";
+    }
+
+    //-- 2 task --
+    public static String secondTaskResult(){
+        char char1 = 'H';
+        byte byteNum= 3;
+        short shortNum = 1;
+        int intNum = 10;
+        String stringWord = "w0r1d";
+        float floatNum = 2.0f;
+        boolean bool = true;
+
+        return char1 + byteNum + shortNum + intNum + " " + stringWord + " " + floatNum + " " + bool;
     }
 
 }
