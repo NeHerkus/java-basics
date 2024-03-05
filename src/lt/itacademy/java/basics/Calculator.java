@@ -19,7 +19,7 @@ public class Calculator {
             2: Rectangle
             3: Square
             0: Quit;
-          _______________    
+          _______________
            """);
     }
 
