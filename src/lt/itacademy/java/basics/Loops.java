@@ -8,10 +8,12 @@ public class Loops {
     public static void calculateHoursAndMins(int days) {
         int hours = 0;
         int minutes = 0;
+        int day = 1;
 
-        for (int day = 1; day <= days; day++) {
+        while (day <= days) {
             hours += 24;
             minutes += 24 * 60;
+            day++;
         }
 
         System.out.println("There are " + hours + " hours and " + minutes + " minutes per year");
