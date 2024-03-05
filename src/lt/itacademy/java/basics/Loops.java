@@ -11,6 +11,10 @@ public class Loops {
 
         String yearsToHoursWhile = yearConverterWhile(input);
         System.out.println(yearsToHoursWhile);
+
+        int number = 5;
+        int factorial = factorialCalculator(number);
+        System.out.println((factorial));
     }
 
     static String yearConverterFor(int days) {
@@ -41,9 +45,21 @@ public class Loops {
             minutes = minutes + (24 * 60);
             input--;
         }
-
         return """
                 There are %d hours and %d minutes in one year
                 """.formatted(hours, minutes);
+    }
+
+    static int factorialCalculator(int number) {
+
+        int factorial = 1;
+        int i = 1;
+
+        while (number >= i) {
+
+            factorial = factorial * i;
+            i++;
+        }
+        return factorial;
     }
 }
