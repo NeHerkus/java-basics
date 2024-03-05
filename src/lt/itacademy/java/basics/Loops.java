@@ -38,5 +38,16 @@ public class Loops {
         System.out.printf("""
                 There are %s hours or %s minutes in one year.
                 """, hours, minutes);
+
+        System.out.println("enter number: ");
+        int myNumber = scanner.nextInt();
+
+        int factorial = 1;
+        for (int i = 1; i <= myNumber; i++) {
+            factorial *= i;
+        }
+        System.out.printf("""
+                Factorial of %s is %s.
+                """, myNumber, factorial);
     }
 }
