@@ -2,7 +2,7 @@ package lt.itacademy.java.basics;
 
 import java.util.Scanner;
 
-class MainBasics {
+class Arithmetic {
     public static void main(String[] args) {
 
         int volume;
