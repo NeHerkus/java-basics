@@ -11,7 +11,7 @@ public class Basics {
         float lfloat = 1.0f;
         char lchar = 'G';
         boolean lbool = true;
-        String lOutput = lchar+lbyte+lshort+age+name+' '+lbool;
+        String lOutput = lchar+lbyte+lshort+lfloat+age+name+' '+lbool;
         System.out.println(lOutput);
 
         System.out.println("Hello my name is " + name + " " + surname + " and I'm " + age + " years old. I am attending IT & Data\n" +
