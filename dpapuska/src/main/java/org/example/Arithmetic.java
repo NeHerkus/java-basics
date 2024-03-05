@@ -7,13 +7,11 @@ public class Arithmetic {
         System.out.println("Enter the side length.");
         double length = scanner.nextDouble();
 
-
         double volume = Math.pow(length,3);
         double perimeter = 12*length;
 
-        System.out.println("Cube’s volume: " + volume + "cm3.");
-        System.out.println("Cube’s perimeter: " + perimeter + "cm3.");
-
+        System.out.printf("Cube’s volume: %.0f cm3.\n", volume);
+        System.out.printf("Cube’s perimeter: %.0f cm3.\n", perimeter);
 
         System.out.println("Enter feet");
         double feet = scanner.nextDouble();
@@ -22,8 +20,7 @@ public class Arithmetic {
         double inches = scanner.nextDouble();
 
         double centimeters = ConvertToCentimeters(feet, inches);
-        System.out.println(feet + " feet and " + inches + " inches = " + centimeters + " cm1");
-
+        System.out.printf("%.0f feet and %.0f cm3.\n", inches, centimeters);
     }
 
     private static double ConvertToCentimeters(double feet, double inches) {

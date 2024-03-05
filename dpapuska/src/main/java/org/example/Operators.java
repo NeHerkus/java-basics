@@ -4,8 +4,6 @@ import java.util.Scanner;
 public class Operators {
     public static void main(String[] args) {
 
-        // Task 5
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first, second, and third triangle sides.");
         String input = scanner.nextLine();
@@ -18,8 +16,6 @@ public class Operators {
         String result = determineTriangleType(side1, side2, side3);
 
         System.out.printf("Triangle is %s. Sides: %d %d %d", result, side1, side2, side3);
-
-        // Task 6
 
         System.out.println("Enter distance, fuel level, fuel usage l/100km, and price per fuel");
 
@@ -39,7 +35,7 @@ public class Operators {
         } else {
             double fuelNeeded = requiredFuel - fuelLevel;
             double fuelCost = fuelNeeded * fuelPrice;
-            System.out.printf("Destination is in %d km. Car is not able to reach the destination. It needss %.1f liter of fuel more. It will cost %.2f", distance, fuelNeeded, fuelCost);
+            System.out.printf("Destination is in %d km. Car is not able to reach the destination. It needs %.1f liter of fuel more. It will cost %.2f", distance, fuelNeeded, fuelCost);
         }
     }
 
