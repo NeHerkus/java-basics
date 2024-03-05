@@ -18,8 +18,8 @@ public class Arithmetic {
         System.out.print("Input: ");
         int len = Integer.parseInt(scan.nextLine());
 
-        System.out.println("Cube’s volume: "+len*len*len +"cm3");
-        System.out.println("\t Cube’s perimeter: "+len*12+"cm");
+        System.out.println("Cube’s volume: " + len * len * len + "cm3");
+        System.out.println("\t Cube’s perimeter: " + len * 12 + "cm");
 
         //Task 4
         System.out.println("TASK 4\n");
@@ -39,19 +39,18 @@ public class Arithmetic {
         System.out.print("Input inches: ");
         double inches = Double.parseDouble(scan.nextLine());
 
-        converterToCentimeters(feet,inches);
+        converterToCentimeters(feet, inches);
 
     }
-    static void converterToCentimeters (double feet, double inches){
-double feetToCm = feet*12*2.54;
-double inchesToCm = inches*2.54;
-double sum = feetToCm+inchesToCm;
+
+    static void converterToCentimeters(double feet, double inches) {
+        double feetToCm = feet * 12 * 2.54;
+        double inchesToCm = inches * 2.54;
+        double sum = feetToCm + inchesToCm;
         DecimalFormat df = new DecimalFormat("#.###");
         sum = Double.valueOf(df.format(sum));
 
-        System.out.println("Output: "+feet+" feet and "+inches+" inches = "+sum+" cm");
-
-
+        System.out.println("Output: " + feet + " feet and " + inches + " inches = " + sum + " cm");
 
 
     }

@@ -19,30 +19,27 @@ public class Basics {
         String age = scan.nextLine();
 
 
-        System.out.println("Hello my name is "+name+" "+surname+ " and I am "+age+ " years old. I am attending IT & Data Academy 2024!");
+        System.out.println("Hello my name is " + name + " " + surname + " and I am " + age + " years old. I am attending IT & Data Academy 2024!");
 
 
-
-      //  Task 2
+        //  Task 2
 
         String something = "H3110";
 
-        int myNumber=123;
+        int myNumber = 123;
 
         float doubleNumber = 2.0f;
 
-        char myChar= 'A';
+        char myChar = 'A';
 
-        boolean myTrue=true;
+        boolean myTrue = true;
 
-        byte b=1;
+        byte b = 1;
 
         short sh = 10;
 
 
-        System.out.println(something +" "+ doubleNumber +" "+ myChar +" "+ myTrue + " "+ myNumber +" "+ b +" "+ sh);
-
-
+        System.out.println(something + " " + doubleNumber + " " + myChar + " " + myTrue + " " + myNumber + " " + b + " " + sh);
 
 
     }
