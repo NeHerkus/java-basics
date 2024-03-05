@@ -18,7 +18,7 @@ public class Calculator {
             1: Triangle
             2: Rectangle
             3: Square
-            0: Quit;      
+            0: Quit;
           _______________    
            """);
     }
