@@ -21,9 +21,9 @@ public class Basics {
         System.out.print("Enter your age: ");
         int age = scanner.nextInt();
 
-        String result = "Hello my name is " + name + " " + surname + " and I am " + age + " years old. I am attending IT & Data Academy 2024!";
+        return "Hello my name is " + name + " " + surname + " and I am " + age + " years old. I am attending IT & Data Academy 2024!";
 
-        return result;
+
     }
 
 }
