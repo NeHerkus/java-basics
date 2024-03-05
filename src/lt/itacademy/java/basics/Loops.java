@@ -16,10 +16,12 @@ public class Loops {
     public static void calculate(int days) {
         int hours = 0;
         int minutes = 0;
+        int i = 0;
 
-        for (int i = 0; i < days; i++) {
+        while (i < days) {
             hours += 24;
             minutes += 1440;
+            i++;
         }
         System.out.println("There are " + hours + " hours or " + minutes + " minutes in one year.");
     }
