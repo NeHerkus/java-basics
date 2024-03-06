@@ -47,5 +47,6 @@ public class Operators {
                 Destination is in %d km. Car is able to reach the destination. It will have %.2f liters of fuel left.
                 """, destIn, fuelLeft);
         }
+        scanner.close();
     }
 }

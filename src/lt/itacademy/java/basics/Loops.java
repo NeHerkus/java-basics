@@ -49,5 +49,6 @@ public class Loops {
         System.out.printf("""
                 Factorial of %s is %s.
                 """, myNumber, factorial);
+        scanner.close();
     }
 }

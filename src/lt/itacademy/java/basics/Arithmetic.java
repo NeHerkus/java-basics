@@ -21,6 +21,7 @@ public class Arithmetic {
         double cmValue = ftValue * 12 * 2.54 + inValue * 2.54;
 
         System.out.println(cmValue);
+        scanner.close();
 
     }
 }

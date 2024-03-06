@@ -39,7 +39,6 @@ public class Basics {
 
         System.out.println(hello);
         scanner.close();
-        System.out.println("Scanner closed");
 
     }
 
