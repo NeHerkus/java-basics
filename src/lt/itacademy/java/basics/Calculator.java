@@ -44,6 +44,18 @@ public class Calculator
             switch (shape)
             {
                 case "Square":
+                    if (separatedInput.length != 2)
+                    {
+                        PrintErrorMessage();
+
+                        continue;
+                    }
+
+                    var edgeLength = Integer.parseInt(separatedInput[1]);
+                    perimeter = CalculateRectanglePerimeter(edgeLength, edgeLength);
+                    area = CalculateRectangleArea(edgeLength, edgeLength);
+
+                    break;
                 case "Rectangle":
                     if (separatedInput.length != 3)
                     {
@@ -73,6 +85,10 @@ public class Calculator
                     area = CalculateTriangleArea(a, b, c);
 
                     break;
+                default:
+                    PrintErrorMessage();
+
+                    continue;
             }
 
             System.out.println(separatedInput[0] + " perimeter is " + perimeter + " and area is " + area);
