@@ -13,11 +13,11 @@ public class Main {
         int age = Integer.parseInt(inputValues[2]);
 
         if(inputValues.length >= 3) {
-            System.out.printf("Hello my name is %s %s and I am %d years old. I am attending IT & Data\n" + "Academy 2024!", name, surname, age);
+            System.out.printf("Hello my name is %s %s and I am %d years old. I am attending IT & Data Academy 2024!\n", name, surname, age);
         }
 
-        int let0 = 3110;
-        char let1 = 'H';
+        char let0 = 'H';
+        int let1 = 3110;
         char let2 = 'w';
         int let3 = 0;
         char let4 = 'r';
@@ -26,6 +26,6 @@ public class Main {
         float let7 = 2.0f;
         boolean let8 = true;
 
-        System.out.println(let1 + "" + let0 + " " + let2 + let3 + let4 + let5 + let6 + " " + let7 + " " + let8);
+        System.out.printf("%c%d %c%d%c%d %c %.1f %b", let0, let1, let2, let3, let4, let5, let6, let7, let8);
     }
 }
