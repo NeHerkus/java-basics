@@ -6,8 +6,7 @@ public class Arithmetic {
 
     public static double feetToCentimeters(double feet, double inches) {
         double totalInches = (feet * 12) + inches;
-        double centimeters = totalInches * 2.54;
-        return centimeters;
+        return totalInches * 2.54;
     }
 
     public static void main(String[] args) {
@@ -26,7 +25,10 @@ public class Arithmetic {
         System.out.print("Enter inches: ");
         double inches = in.nextDouble();
 
+        in.close();
+
         double centimeters = feetToCentimeters(feet, inches);
         System.out.println(feet + " feet and " + inches + " inches = " + centimeters + " cm");
+
     }
 }
