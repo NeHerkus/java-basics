@@ -49,14 +49,10 @@ public class Loops {
 
     public static void calculateFactorial(int number) {
 
-        int factorial = 0;
+        int factorial = 1;
 
-        for (int i = number; i > 1; i--) {
-            if (i == number) {
-                factorial = number;
-            } else {
-                factorial *= i;
-            }
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
         }
         System.out.printf("Factorial of number %d is  %d ", number, factorial);
     }
