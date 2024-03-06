@@ -3,26 +3,27 @@ package lt.itacademy.java.basics;
 public class Operators {
     public static void main(String[] args) {
 
-        //checkTriangleType(3, 4, 5);
-        //checkTriangleType(1, 3, 5);
+        checkTriangleValid(5, 5, 5);
+        checkTriangleValid(1, 3, 5);
         destination(100, 6, 7, 1.25);
         destination(110, 25, 7, 1.25);
     }
-
-    public static void checkTriangleType(int sideA, int sideB, int sideC) {
-        // Check if the triangle is valid
+    public static void checkTriangleValid(int sideA, int sideB, int sideC) {
         if (sideA + sideB <= sideC || sideA + sideC <= sideB || sideB + sideC <= sideA) {
             System.out.println("Triangle is invalid. Sides: " + sideA + " " + sideB + " " + sideC);
-            return;
         }
+        else {
+            checkTriangleType(sideA, sideB, sideC);
+        }
+    }
 
-        // Determine the type of triangle
-        if (sideA == sideB && sideB == sideC) {
-            System.out.println("Triangle is Equilateral. Sides: " + sideA + " " + sideB + " " + sideC);
-        } else if (sideA == sideB || sideA == sideC || sideB == sideC) {
-            System.out.println("Triangle is Isosceles. Sides: " + sideA + " " + sideB + " " + sideC);
-        } else {
-            System.out.println("Triangle is Scalene. Sides: " + sideA + " " + sideB + " " + sideC);
+    public static void checkTriangleType(int sideA, int sideB, int sideC) {
+            if (sideA == sideB && sideB == sideC) {
+                System.out.println("Triangle is Equilateral. Sides: " + sideA + " " + sideB + " " + sideC);
+            } else if (sideA == sideB || sideA == sideC || sideB == sideC) {
+                System.out.println("Triangle is Isosceles. Sides: " + sideA + " " + sideB + " " + sideC);
+            } else {
+                System.out.println("Triangle is Scalene. Sides: " + sideA + " " + sideB + " " + sideC);
         }
     }
 

@@ -8,12 +8,15 @@ public class Basics {
         Scanner myObj = new Scanner(System.in);
         String userName = myObj.nextLine();
         String lastName = myObj.nextLine();
-        Integer age = myObj.nextInt();
+        int age = myObj.nextInt();
         firstTask(userName, lastName, age);
     }
 
-    private static void firstTask(String userName, String lastName, Integer age) {
-        System.out.println("Hello my name is " + userName + " " + lastName + " and I am " + age + " years old. I am attending IT & Data Academy 2024");
+    private static void firstTask(String userName, String lastName, int age) {
+        String example = """
+                Hello my name is %s %s and I am %d years old. I am attending IT & Data Academy 2024
+                """.formatted(userName, lastName, age);
+        System.out.println(example);
     }
 
     private static void secondTask() {
@@ -24,7 +27,7 @@ public class Basics {
         char[] e = "w0r1d".toCharArray();
         byte f = 110;
 
-        String result = b + "" + a + "" + f + " " + new String(e) + " " + c + " " + d;
+        String result = b + "" + a + f + " " + new String(e) + " " + c + " " + d;
         System.out.println(result);
     }
 }
