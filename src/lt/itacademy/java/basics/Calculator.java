@@ -9,11 +9,13 @@ public class Calculator {
         Scanner sc = new Scanner(System.in);
         String decision;
         do {
+            System.out.print("Enter the shape: ");
             String shape = sc.nextLine();
             shape = shape.toUpperCase();
 
             switch (shape) {
                 case "RECTANGLE":
+                    System.out.println("Please, enter two rectangle sides.");
                     int firstSide = sc.nextInt();
                     int secondSide = sc.nextInt();
                     sc.nextLine();
@@ -22,22 +24,25 @@ public class Calculator {
                     break;
 
                 case "TRIANGLE":
+                    System.out.println("Please, enter three triangle sides.");
                     int firstSideT = sc.nextInt();
                     int secondSideT = sc.nextInt();
                     int thirdSideT = sc.nextInt();
                     sc.nextLine();
+
                     calculateTriangle(firstSideT, secondSideT, thirdSideT);
                     decision = closeCalculator(sc);
                     break;
 
                 case "SQUARE":
+                    System.out.print("Please, enter square side: ");
                     int side = sc.nextInt();
                     sc.nextLine();
                     calculateSquare(side);
                     decision = closeCalculator(sc);
                     break;
                 default:
-                    System.out.println("Please enter a valid shape");
+                    System.out.println("Please enter a valid shape (Rectangle, Triangle or Square).");
                     decision = closeCalculator(sc);
                     break;
             }
