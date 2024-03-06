@@ -8,12 +8,13 @@ public class Main {
 
         String input = scanner.nextLine();
         String[] inputValues = input.split("\\s+");
-        String name = inputValues[0];
-        String surname = inputValues[1];
-        int age = Integer.parseInt(inputValues[2]);
 
-        if(inputValues.length >= 3) {
-            System.out.printf("Hello my name is %s %s and I am %d years old. I am attending IT & Data Academy 2024!\n", name, surname, age);
+        if (inputValues.length >= 3) {
+            String name = inputValues[0];
+            String surname = inputValues[1];
+            int age = Integer.parseInt(inputValues[2]);
+
+            System.out.printf("Hello, my name is %s %s, and I am %d years old. I am attending IT & Data Academy 2024!\n", name, surname, age);
         }
 
         char let0 = 'H';

@@ -15,14 +15,13 @@ public class Loops {
     }
 
     public static void calculateFactorialNumber(int number) {
-        int answer = 1;
-        int oldNumber = number;
+        int factorial = 1;
 
-        for (int i = 1; i <= oldNumber; i++) {
-            answer *= i;
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
         }
 
-        System.out.printf("Factorial of number %d is %d.", oldNumber, answer);
+        System.out.printf("Factorial of number %d is %d.", number, factorial);
     }
 
     public static void calculateHoursAndMinutes(int daysPerYear) {
