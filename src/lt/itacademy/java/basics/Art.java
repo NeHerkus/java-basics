@@ -6,17 +6,15 @@ public class Art {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
-        int symbols = 1;
 
-        for (int i = input - 1; i >= 0; i--) {
-            for (int j = 0; j <= i; j++) {
+        for (int i = 0; i < input; i++) {
+            for (int j = 0; j < input - i; j++) {
                 System.out.print(" ");
             }
-            for (int j = 1; j <= symbols; j++) {
+            for (int j = 0; j <= 2 * i; j++) {
                 System.out.print("#");
             }
 
-            symbols += 2;
             System.out.println();
         }
 
