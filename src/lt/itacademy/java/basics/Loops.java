@@ -5,13 +5,16 @@ import java.util.Scanner;
 import static java.lang.System.*;
 
 public class Loops {
+
+
     public static void main(String[] args) {
-        hoursMinutesInDays();
+        hoursMinutesInDaysForLoop();
+        hoursMinutesInDaysWhileLoop();
     }
 
-    public static void hoursMinutesInDays() {
+    public static void hoursMinutesInDaysForLoop() {
         Scanner scanner = new Scanner(in);
-        out.print("Enter days: ");
+        out.print("Enter days (for loop): ");
         int d = Integer.parseInt(scanner.nextLine());
         int h = 0;
         int m = 0;
@@ -22,6 +25,28 @@ public class Loops {
 
         for (int i = 0; i < h; i++) {
             m += 60;
+        }
+
+        out.println("There are " + h + " hours or " + m + " minutes in " + d + "days.");
+    }
+    public static void hoursMinutesInDaysWhileLoop() {
+        Scanner scanner = new Scanner(in);
+        out.print("Enter days (while loop): ");
+        int d = Integer.parseInt(scanner.nextLine());
+        int h = 0;
+        int m = 0;
+        int i = d;
+
+        while (i > 0) {
+            h += 24;
+            i--;
+        }
+
+        i = h;
+
+        while (i > 0) {
+            m += 60;
+            i--;
         }
 
         out.println("There are " + h + " hours or " + m + " minutes in " + d + "days.");
