@@ -1,5 +1,4 @@
 package lt.itacademy.java.basics;
-
 import java.util.Scanner;
 
 import static java.lang.System.*;
@@ -10,6 +9,7 @@ public class Loops {
     public static void main(String[] args) {
         hoursMinutesInDaysForLoop();
         hoursMinutesInDaysWhileLoop();
+        countFactorial();
     }
 
     public static void hoursMinutesInDaysForLoop() {
@@ -50,5 +50,19 @@ public class Loops {
         }
 
         out.println("There are " + h + " hours or " + m + " minutes in " + d + "days.");
+    }
+
+    public static void countFactorial() {
+        Scanner scanner = new Scanner(in);
+        out.print("Enter number: ");
+        int n = Integer.parseInt(scanner.nextLine());
+        int f = 1;
+
+        for (int i = 0; i < n; i++) {
+            f = f*(n-i);
+        }
+
+
+        out.println("Factorial of number " + n + " is " + f + ".");
     }
 }
