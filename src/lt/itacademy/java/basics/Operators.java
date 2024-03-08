@@ -1,5 +1,4 @@
 package lt.itacademy.java.basics;
-import javax.swing.plaf.PanelUI;
 import java.util.Scanner;
 import static java.lang.System.*;
 
@@ -7,19 +6,10 @@ public class Operators {
 
 
     public static void main(String[] args) {
-
-
-        Scanner scanner = new Scanner(in);
-        out.print("Enter 1 for triangle, 2 for carTravel : ");
-        int i = scanner.nextInt();
-        if (i == 1) {
-            Triangle();
-        } else if (i == 2) {
-            CarTravel();
-        }
+        triangle();
     }
 
-    public static void Triangle() {
+    public static void triangle() {
         Scanner scanner = new Scanner(in);
         out.print("Enter triangle edges: ");
         String edges = scanner.nextLine();
@@ -38,24 +28,5 @@ public class Operators {
         } else {
             out.println("Triangle is invalid. Sides: " + edge1 + " " + edge2 + " " + edge3);
         }
-    }
-
-    public static void CarTravel() {
-        int range;
-        double fuel;
-        double usage;
-        double price;
-
-        Scanner scanner = new Scanner(in);
-        out.print("Enter your range: ");
-        range = scanner.nextInt();
-        out.print("Fuel left: ");
-        fuel = scanner.nextDouble();
-        out.print("Fuel usage per 100km: ");
-        usage = scanner.nextDouble();
-        out.print("Fuel price: ");
-        price = scanner.nextDouble();
-
-
     }
 }
