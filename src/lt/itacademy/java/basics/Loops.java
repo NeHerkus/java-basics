@@ -1,7 +1,9 @@
 package lt.itacademy.java.basics;
+
 import java.util.Scanner;
 
-import static java.lang.System.*;
+import static java.lang.System.in;
+import static java.lang.System.out;
 
 public class Loops {
 
@@ -12,7 +14,7 @@ public class Loops {
         countFactorial();
     }
 
-    public static void hoursMinutesInDaysForLoop() {
+    private static void hoursMinutesInDaysForLoop() {
         Scanner scanner = new Scanner(in);
         out.print("Enter days (for loop): ");
         int d = Integer.parseInt(scanner.nextLine());
@@ -29,7 +31,8 @@ public class Loops {
 
         out.println("There are " + h + " hours or " + m + " minutes in " + d + "days.");
     }
-    public static void hoursMinutesInDaysWhileLoop() {
+
+    private static void hoursMinutesInDaysWhileLoop() {
         Scanner scanner = new Scanner(in);
         out.print("Enter days (while loop): ");
         int d = Integer.parseInt(scanner.nextLine());
@@ -52,14 +55,14 @@ public class Loops {
         out.println("There are " + h + " hours or " + m + " minutes in " + d + "days.");
     }
 
-    public static void countFactorial() {
+    private static void countFactorial() {
         Scanner scanner = new Scanner(in);
         out.print("Enter number: ");
         int n = Integer.parseInt(scanner.nextLine());
         int f = 1;
 
         for (int i = 0; i < n; i++) {
-            f = f*(n-i);
+            f = f * (n - i);
         }
 
 

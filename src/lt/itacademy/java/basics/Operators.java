@@ -1,32 +1,36 @@
 package lt.itacademy.java.basics;
+
 import java.util.Scanner;
-import static java.lang.System.*;
+
+import static java.lang.System.in;
+import static java.lang.System.out;
 
 public class Operators {
-
+    private static final String space = " ";
+    private static final String resultMessage = "Triangle is %s. Sides: %s %s %s";
 
     public static void main(String[] args) {
         triangle();
     }
 
-    public static void triangle() {
+    private static void triangle() {
         Scanner scanner = new Scanner(in);
         out.print("Enter triangle edges: ");
-        String edges = scanner.nextLine();
-        String[] edgesArr = edges.split(" ");
-        int edge1 = Integer.parseInt(edgesArr[0]);
-        int edge2 = Integer.parseInt(edgesArr[1]);
-        int edge3 = Integer.parseInt(edgesArr[2]);
+        String[] edgesArr = scanner.nextLine().trim().split(space);
+        scanner.close();
+        detectTriangle(Integer.parseInt(edgesArr[0]), Integer.parseInt(edgesArr[1]), Integer.parseInt(edgesArr[2]));
+    }
 
-        if (edge1 == edge2 && edge2 == edge3) {
-            out.println("Triangle is Equilateral. Sides: " + edge1 + " " + edge2 + " " + edge3);
-        } else if ((edge1 == edge2 || edge2 == edge3 || edge1 == edge3) &&
-                ((edge1 + edge2) > edge3 && (edge1 + edge3) > edge2 && (edge2 + edge3 > edge1))) {
-            out.println("Triangle is Isosceles. Sides: " + edge1 + " " + edge2 + " " + edge3);
-        } else if ((edge1 + edge2) > edge3 && (edge1 + edge3) > edge2 && (edge2 + edge3 > edge1)) {
-            out.println("Triangle is Scalene. Sides: " + edge1 + " " + edge2 + " " + edge3);
-        } else {
-            out.println("Triangle is invalid. Sides: " + edge1 + " " + edge2 + " " + edge3);
+    private static void detectTriangle(int edge1, int edge2, int edge3) {
+        boolean oneLessThanOtherTwoSum = (edge1 + edge2) > edge3 && (edge1 + edge3) > edge2 && (edge2 + edge3) > edge1;
+        boolean atLeastTwoEdgesEven = edge1 == edge2 || edge2 == edge3 || edge1 == edge3;
+        boolean allEdgesEven = edge1 == edge2 && edge2 == edge3;
+        if (allEdgesEven) out.printf(resultMessage, "Equilateral", edge1, edge2, edge3);
+        else {
+            if (atLeastTwoEdgesEven && oneLessThanOtherTwoSum)
+                out.printf(resultMessage, "Isosceles", edge1, edge2, edge3);
+            else if (oneLessThanOtherTwoSum) out.printf(resultMessage, "Scalene", edge1, edge2, edge3);
+            else out.printf(resultMessage, "invalid", edge1, edge2, edge3);
         }
     }
 }

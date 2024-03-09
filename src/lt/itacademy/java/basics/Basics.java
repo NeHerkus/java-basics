@@ -1,6 +1,9 @@
 package lt.itacademy.java.basics;
+
 import java.util.Scanner;
-import static java.lang.System.*;
+
+import static java.lang.System.in;
+import static java.lang.System.out;
 
 public class Basics {
     public static void main(String[] args) {
@@ -21,7 +24,7 @@ public class Basics {
         short s = 0;
         float f = 2.0f;
         int i = 3110;
-        String line = "" + h + i +sp + w + s + r + o + d + sp +f +sp + b;
+        String line = "" + h + i + sp + w + s + r + o + d + sp + f + sp + b;
         out.println(line);
     }
 }
