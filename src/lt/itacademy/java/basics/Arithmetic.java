@@ -4,13 +4,16 @@ import java.util.Scanner;
 
 public class Arithmetic
 {
+    private static final double INCHES_IN_FEET = 12;
+    private static final double FEET_TO_CENTIMETERS = 2.54;
+
     public static void main(String[] args)
     {
-        // DoTaskThree();
-        DoTaskFour();
+        // doTaskThree();
+        doTaskFour();
     }
 
-    private static void DoTaskThree()
+    private static void doTaskThree()
     {
         System.out.println("Please enter cube edge length:");
 
@@ -18,26 +21,26 @@ public class Arithmetic
         var rawInput = scanner.nextLine();
         var edgeLength = Integer.parseInt(rawInput);
 
-        var volume = GetVolume(edgeLength);
-        var perimeter = GetPerimeter(edgeLength);
+        int volume = getVolume(edgeLength);
+        int perimeter = getPerimeter(edgeLength);
 
         System.out.println("Cube's volume: " + volume + "cm3.");
         System.out.println("Cube's perimeter: " + perimeter + "cm.");
     }
 
-    private static int GetVolume(int input)
+    private static int getVolume(int input)
     {
         var volume = Math.pow(input, 3);
 
-        return (int)volume;
+        return (int) volume;
     }
 
-    private static int GetPerimeter(int input)
+    private static int getPerimeter(int input)
     {
         return input * 12;
     }
 
-    private static void DoTaskFour()
+    private static void doTaskFour()
     {
         System.out.println("Please enter feet and inches separated by a space:2.4 2");
 
@@ -45,18 +48,19 @@ public class Arithmetic
         var rawInput = scanner.nextLine();
         var inputs = rawInput.split("\\s+");
 
-        if (inputs.length != 2) return;
+        if (inputs.length == 2)
+        {
+            var feet = Double.parseDouble(inputs[0]);
+            var inches = Double.parseDouble(inputs[1]);
 
-        var feet = Double.parseDouble(inputs[0]);
-        var inches = Double.parseDouble(inputs[1]);
+            var centimeters = convertImperialToMetric(feet, inches);
 
-        var centimeters = ConvertImperialToMetric(feet, inches);
-
-        System.out.println(feet + " feet and " + inches + " inches = " + centimeters + " cm");
+            System.out.println(feet + " feet and " + inches + " inches = " + centimeters + " cm");
+        }
     }
 
-    private static double ConvertImperialToMetric(double feet, double inches)
+    private static double convertImperialToMetric(double feet, double inches)
     {
-        return (feet * 12 + inches) * 2.54;
+        return (feet * INCHES_IN_FEET + inches) * FEET_TO_CENTIMETERS;
     }
 }

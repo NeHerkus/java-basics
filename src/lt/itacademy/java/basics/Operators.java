@@ -1,6 +1,5 @@
 package lt.itacademy.java.basics;
 
-import java.sql.Array;
 import java.util.*;
 
 public class Operators
@@ -8,10 +7,10 @@ public class Operators
     public static void main(String[] args)
     {
         // DoTaskFive();
-        DoTaskSix();
+        doTaskSix();
     }
 
-    private static void DoTaskFive()
+    private static void doTaskFive()
     {
         System.out.println("Enter 3 sides separated by spaces:");
 
@@ -41,7 +40,7 @@ public class Operators
         }
     }
 
-    private static void DoTaskSix()
+    private static void doTaskSix()
     {
         System.out.println("PLease enter 4 inputs:");
 
@@ -57,7 +56,7 @@ public class Operators
             values[i] = Double.parseDouble(separatedInput[i]);
         }
 
-        var usedFuel = CanDriveToDestination(values[0], values[1], values[2]);
+        var usedFuel = canDriveToDestination(values[0], values[1], values[2]);
 
         if (usedFuel >= 0)
         {
@@ -71,7 +70,7 @@ public class Operators
         }
     }
 
-    private static double CanDriveToDestination(double distance, double fuel, double mileage)
+    private static double canDriveToDestination(double distance, double fuel, double mileage)
     {
         double countOf100s = distance / 100f;
         double usedFuel = mileage * countOf100s;

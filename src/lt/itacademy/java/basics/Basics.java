@@ -7,12 +7,12 @@ public class Basics
     public static void main(String args[])
     {
         // DoTaskOne();
-        var result = DoTaskTwo();
+        var result = doTaskTwo();
 
         System.out.println(result);
     }
 
-    private static String DoTaskTwo()
+    private static String doTaskTwo()
     {
         char firstVar = 'H';
         int secondVar = 3;
@@ -28,7 +28,7 @@ public class Basics
         return String.valueOf(firstVar) + String.valueOf(secondVar) + String.valueOf(thirdVar) + " " + String.valueOf(w) + String.valueOf(fourthVar) + String.valueOf(idkVar) + String.valueOf(otherVal) + String.valueOf(testVal) + " " + String.valueOf(fifthVar) + " " + String.valueOf(sixthVar);
     }
 
-    private static void DoTaskOne()
+    private static void doTaskOne()
     {
         Scanner scanner = new Scanner(System.in);
 
@@ -47,6 +47,6 @@ public class Basics
         finalText.append(age);
         finalText.append(" years old. I am attending IT & Data Academy 2024!");
 
-        System.out.println(finalText.toString());
+        System.out.println(finalText);
     }
 }

@@ -4,13 +4,16 @@ import java.util.Scanner;
 
 public class Loops
 {
+    private static final int HOURS_IN_DAY = 24;
+    private static final int MINUTES_IN_DAY = 60 * 24;
+
     public static void main(String[] args)
     {
         // DoTaskEight();
-        DoTaskNine();
+        doTaskNine();
     }
 
-    private static void DoTaskNine()
+    private static void doTaskNine()
     {
         System.out.println("Enter a number:");
 
@@ -27,7 +30,7 @@ public class Loops
         System.out.println("Factorial of number " + number + " is " + factorial);
     }
 
-    private static void DoTaskEight()
+    private static void doTaskEight()
     {
         System.out.println("Enter days per year:");
 
@@ -41,8 +44,8 @@ public class Loops
         int i = 0;
         while (i < daysPerYear)
         {
-            hours += 24;
-            minutes += 24 * 60;
+            hours += HOURS_IN_DAY;
+            minutes += MINUTES_IN_DAY;
 
             i++;
         }
