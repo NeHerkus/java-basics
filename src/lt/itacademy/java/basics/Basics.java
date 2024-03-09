@@ -14,8 +14,8 @@ public class Basics {
         String surname = separatedWords[1];
         String age = separatedWords[2];
         System.out.println("Hello my name is " + name + " " + surname + " and I am " + age + " years old. I am attending IT & Data Academy 2024!");
+        scanner.close();
 
-        /////////////
 
         char h = 'h';
         int ello = 3110;
@@ -31,6 +31,7 @@ public class Basics {
 
         String phrase = "" + h + ello + " " + w + o + r + l + d + " " + two + " " + truth;
         System.out.println(phrase);
+
 
     }
 }
