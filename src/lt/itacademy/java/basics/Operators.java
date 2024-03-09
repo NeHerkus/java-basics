@@ -1,14 +1,12 @@
 
 void main() {
-
     System.out.println(determineTriangleType(5, 2, 3));
     System.out.println(checkIfCanReachDestination(100F, 15F, 7.5F, 1.78F));
 }
 
-String determineTriangleType(int sideA, int sideB, int sideC) {
+private String determineTriangleType(int sideA, int sideB, int sideC) {
 
     // there has to be a better way to do this...
-
     if (!(sideA <= sideB + sideC && sideB <= sideA + sideC && sideC <= sideA + sideB)) {
         return String.format("Triangle is invalid. Sides: %d %d %d", sideA, sideB, sideC);
     } else if (sideA == sideB && sideB == sideC) {
@@ -20,7 +18,7 @@ String determineTriangleType(int sideA, int sideB, int sideC) {
     }
 }
 
-String checkIfCanReachDestination(float distance, float fuelInTank, float fuelUsage100Km, float fuelPrice) {
+private String checkIfCanReachDestination(float distance, float fuelInTank, float fuelUsage100Km, float fuelPrice) {
     float fuelNeeded = (distance / 100) * (fuelUsage100Km);
 
     if (fuelNeeded > fuelInTank) {

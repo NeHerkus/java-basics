@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Basics {
 
-    static Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
 
         char someChar = 'H';
         int someInt = 3;
@@ -17,12 +17,13 @@ public class Basics {
         boolean someBoolean = true;
 
         System.out.printf("%c%d%d%d %s %.1f %b%n", someChar, someInt, someByte,
-                          someShort, someString, someFloat, someBoolean);
+                someShort, someString, someFloat, someBoolean);
 
         System.out.println(getNameAndAge());
+        sc.close();
     }
 
-    public static String getNameAndAge(){
+    private static String getNameAndAge() {
 
         String name = getUserInputString("Enter your first name:");
         while (name.isEmpty()) {
@@ -40,10 +41,10 @@ public class Basics {
         }
 
         return String.format("Hello my name is %s %s and I am %s years old." +
-                " I am attending IT & Data Academy 2024",name, surname, age);
+                " I am attending IT & Data Academy 2024", name, surname, age);
     }
 
-    public static String getUserInputString(String msg) {
+    private static String getUserInputString(String msg) {
         System.out.println(msg);
         return sc.nextLine();
     }
