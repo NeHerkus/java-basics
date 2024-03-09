@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         perimeterArea();
+        sc.close();
     }
 
-    static Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
 
-    public static void rectangle() {
+    private static void rectangle() {
         System.out.println("Write length of one side:");
         double a = sc.nextDouble();
         System.out.println("Write length of another side:");
@@ -21,7 +22,7 @@ public class Calculator {
         }
     }
 
-    public static void triangle() {
+    private static void triangle() {
         System.out.println("Write length of first side:");
         double a = sc.nextDouble();
         System.out.println("Write length of second side:");
@@ -36,7 +37,7 @@ public class Calculator {
         }
     }
 
-    public static void square() {
+    private static void square() {
         System.out.println("Write length square side:");
         double a = sc.nextDouble();
         if (a <= 0) {
@@ -46,7 +47,7 @@ public class Calculator {
         }
     }
 
-    public static void perimeterArea() {
+    private static void perimeterArea() {
         boolean c = true;
         while (c) {
             System.out.println("Choose a figure: ");

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Basics {
     public static void main(String[] args) {
         read();
-
+        sc.close();
         boolean bool = true;
         byte one = 1;
         char h = 'H';
@@ -13,13 +13,14 @@ public class Basics {
         char r = 'r';
         char d = 'd';
         float fl = 2.0f;
-        int i = 3110;
+        int i = 31;
         short zero = 0;
         System.out.println(" " + h + i + " " + w + zero + r + one + d + " " + fl + " " + bool);
     }
-    static Scanner sc = new Scanner(System.in);
 
-    public static void read() {
+    private static Scanner sc = new Scanner(System.in);
+
+    private static void read() {
         System.out.println("Write your name and surname anf age");
         String st = sc.nextLine();
         String[] strings = st.split(" ");
