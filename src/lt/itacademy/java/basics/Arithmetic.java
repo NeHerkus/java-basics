@@ -1,6 +1,6 @@
 
 private static final int NUM_CUBE_SIDES = 12;
-private static final float INCHES_PER_FOOT = 12F;
+private static final int INCHES_PER_FOOT = 12;
 private static final float CM_PER_INCH = 2.54F;
 
 

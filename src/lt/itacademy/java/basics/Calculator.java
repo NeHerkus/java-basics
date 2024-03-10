@@ -119,6 +119,7 @@ public class Calculator {
                     The shape is a square.
                     """);
         }
+
         printMenu();
         processMenuChoice();
     }
