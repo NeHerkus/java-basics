@@ -9,7 +9,7 @@ public class Basics {
     }
 
     //-- 1 task --
-    public static String firstTaskResult(){
+    private static String firstTaskResult(){
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter your name: ");
@@ -25,7 +25,7 @@ public class Basics {
     }
 
     //-- 2 task --
-    public static String secondTaskResult(){
+    private static String secondTaskResult(){
         char char1 = 'H';
         byte byteNum= 3;
         short shortNum = 1;
