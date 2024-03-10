@@ -3,10 +3,13 @@ package lt.itacademy.java.basics;
 import java.util.Scanner;
 
 public class Arithmetic {
+        final static float CM_IN_INCHES = 2.54f;
+        final static int INCHES_IN_FEET = 12;
+        final static int NUMBER_OF_CUBE_EDGES = 12;
     public static void main(String[] args) {
 
-        float feet;
-        float inches;
+        float feet = 0;
+        float inches = 0;
         Scanner scanner = new Scanner(System.in);
 //        System.out.println("Input cubes line number: ");
 //        int cubeLineSize = scanner.nextInt();
@@ -18,22 +21,23 @@ public class Arithmetic {
         feet = scanner.nextFloat();
         System.out.println("Input value of inches: ");
         inches = scanner.nextFloat();
+        scanner.close();
 
         System.out.println(feet + " feet and " + inches + " inches = " + String.format("%.3f",feetAndInchesToCm(feet, inches)) + " cm");
 
 
     }
-        public static int getCubeVolume(int number){
+        private static int getCubeVolume(int number){
             return number * number * number;
         }
 
-        public static int getCubePerimeter(int number){
-            return 12 * number;
+        private static int getCubePerimeter(int number){
+            return NUMBER_OF_CUBE_EDGES * number;
         }
 
-        public static float feetAndInchesToCm(float feet, float inches){
-            inches += feet * 12;
-            return (float) (inches * 2.54f);
+        private static float feetAndInchesToCm(float feet, float inches){
+            inches += feet * INCHES_IN_FEET;
+            return inches * CM_IN_INCHES;
 
         }
 }

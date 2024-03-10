@@ -9,6 +9,7 @@ public class Art {
 
         System.out.println("Input value: ");
         int depthOfTree = scanner.nextInt();
+        scanner.close();
 
         for(int i = 1; i <= depthOfTree; i++){
 

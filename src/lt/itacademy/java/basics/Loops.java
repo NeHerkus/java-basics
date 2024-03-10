@@ -3,6 +3,9 @@ package lt.itacademy.java.basics;
 import java.util.Scanner;
 
 public class Loops {
+
+    final static int HOURS_IN_A_DAY = 24;
+    final static int MINUTES_IN_A_DAY = 1440;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -16,7 +19,7 @@ public class Loops {
 
         System.out.printf("Factorial of number %d is %d", number, numberToFactorial(number));
     }
-    public static void daysToHoursAndMinutes(int days){
+    private static void daysToHoursAndMinutes(int days){
         int hours = 0;
         int minutes = 0;
 
@@ -31,15 +34,15 @@ public class Loops {
 
         // Task 8
         while( days > 0){
-            hours += 24;
-            minutes += 1440;
+            hours += HOURS_IN_A_DAY;
+            minutes += MINUTES_IN_A_DAY;
             days--;
         }
         System.out.printf("There are %d hours or %d minutes in one year", hours, minutes);
     }
 
     //Task 9
-    static int numberToFactorial(int number){
+    private static int numberToFactorial(int number){
         int factorial = 1;
         while(number > 0){
             factorial *= number;

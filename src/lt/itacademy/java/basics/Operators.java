@@ -7,10 +7,10 @@ public class Operators {
 //        int sideA;
 //        int sideB;
 //        int sideC;
-        float distanceToDestination;
-        int fuelInTank;
-        int fuelUsagePer100Km;
-        float fuelPricePerLitre;
+        float distanceToDestination = 0;
+        int fuelInTank = 0;
+        int fuelUsagePer100Km = 0;
+        float fuelPricePerLitre = 0;
 
 
         Scanner scanner = new Scanner(System.in);

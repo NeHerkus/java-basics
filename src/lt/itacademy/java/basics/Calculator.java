@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         boolean useCalculator = true;
-        String figure;
+        String figure = "";
 
         while(useCalculator){
             Scanner scanner = new Scanner(System.in);
@@ -29,7 +29,7 @@ public class Calculator {
     static Scanner scanner = new Scanner(System.in);
 
 
-    static boolean isRectangleValid(int edge1, int edge2){
+    private static boolean isRectangleValid(int edge1, int edge2){
         boolean isValid;
 
         if(edge1 <= 0 || edge2 <= 0){
@@ -44,9 +44,9 @@ public class Calculator {
         return isValid;
     }
 
-    static void calculateRectangle(){
-        int edge1;
-        int edge2;
+    private static void calculateRectangle(){
+        int edge1 = 0;
+        int edge2 = 0;
 
         System.out.println("Put the values for two edges of the rectangle:");
         edge1 = scanner.nextInt();
@@ -61,8 +61,8 @@ public class Calculator {
             System.out.println("Invalid rectangle. Make sure the values for rectangle are not equal or less than zero, or the edges are not equal.");
         }
     }
-    static void calculateSquare(){
-        int edge1;
+    private static void calculateSquare(){
+        int edge1 = 0;
 
         System.out.println("Put a value for the edge of the square:");
         edge1 = scanner.nextInt();
@@ -76,7 +76,7 @@ public class Calculator {
 
     }
 
-    static boolean isTriangleValid(int edge1, int edge2, int edge3){
+    private static boolean isTriangleValid(int edge1, int edge2, int edge3){
         boolean isValid;
 
         if(edge1 <= 0 || edge2 <= 0 || edge3 <= 0){
@@ -86,10 +86,10 @@ public class Calculator {
         return isValid;
 
     }
-    static void calculateTriangle(){
-        int edge1;
-        int edge2;
-        int edge3;
+    private static void calculateTriangle(){
+        int edge1 = 0;
+        int edge2 = 0;
+        int edge3 = 0;
 
         System.out.println("Put the values of the edges of the triangle:");
         edge1 = scanner.nextInt();
@@ -105,7 +105,7 @@ public class Calculator {
         }
     }
 
-    static void proceedFigure(String figure){
+    private static void proceedFigure(String figure){
         switch (figure.toLowerCase()){
             case "triangle":
                 calculateTriangle();
