@@ -4,90 +4,120 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Calculator {
+    private static final int SIDES_OF_THE_SQUARE = 4;
+
     public static void main(String[] args) {
-//        Task 10
         Scanner sc = new Scanner(System.in);
         String decision;
+
         do {
             System.out.print("Enter the shape: ");
-            String shape = sc.nextLine();
-            shape = shape.toUpperCase();
+            String shape = sc.nextLine().toUpperCase();
 
-            switch (shape) {
-                case "RECTANGLE":
-                    System.out.println("Please, enter two rectangle sides.");
-                    int firstSide = sc.nextInt();
-                    int secondSide = sc.nextInt();
-                    sc.nextLine();
-                    calculateRectangle(firstSide, secondSide);
-                    decision = closeCalculator(sc);
-                    break;
-
-                case "TRIANGLE":
-                    System.out.println("Please, enter three triangle sides.");
-                    int firstSideT = sc.nextInt();
-                    int secondSideT = sc.nextInt();
-                    int thirdSideT = sc.nextInt();
-                    sc.nextLine();
-
-                    calculateTriangle(firstSideT, secondSideT, thirdSideT);
-                    decision = closeCalculator(sc);
-                    break;
-
-                case "SQUARE":
-                    System.out.print("Please, enter square side: ");
-                    int side = sc.nextInt();
-                    sc.nextLine();
-                    calculateSquare(side);
-                    decision = closeCalculator(sc);
-                    break;
-                default:
+            decision = switch (shape) {
+                case "RECTANGLE" -> {
+                    handleRectangle(sc);
+                    yield closeCalculator(sc);
+                }
+                case "TRIANGLE" -> {
+                    handleTriangle(sc);
+                    yield closeCalculator(sc);
+                }
+                case "SQUARE" -> {
+                    handleSquare(sc);
+                    yield closeCalculator(sc);
+                }
+                default -> {
                     System.out.println("Please enter a valid shape (Rectangle, Triangle or Square).");
-                    decision = closeCalculator(sc);
-                    break;
-            }
+                    yield closeCalculator(sc);
+                }
+            };
         } while (Objects.equals(decision, "yes"));
     }
 
-    public static void calculateRectangle(int first, int second) {
+    private static void handleRectangle(Scanner sc) {
+        System.out.println("Please, enter two rectangle sides.");
+        int firstSide = sc.nextInt();
+        int secondSide = sc.nextInt();
+        sc.nextLine();
+        calculateRectangle(firstSide, secondSide);
+    }
+
+    private static void handleTriangle(Scanner sc) {
+        System.out.println("Please, enter three triangle sides.");
+        int firstSideT = sc.nextInt();
+        int secondSideT = sc.nextInt();
+        int thirdSideT = sc.nextInt();
+        sc.nextLine();
+        calculateTriangle(firstSideT, secondSideT, thirdSideT);
+    }
+
+    private static void handleSquare(Scanner sc) {
+        System.out.print("Please, enter square side: ");
+        int side = sc.nextInt();
+        sc.nextLine();
+        calculateSquare(side);
+    }
+
+    private static void calculateRectangle(int first, int second) {
         if (first > 0 && second > 0) {
             int perimeter = (first + second) * 2;
             int area = first * second;
-            System.out.println("Rectangle perimeter is " + perimeter + " and area is " + area + ".");
+            System.out.printf("Rectangle perimeter is %d and area is %d.\n", perimeter, area);
         } else {
             System.out.println("Rectangle edge length can’t be 0 or below.");
         }
     }
 
-    public static void calculateTriangle(int first, int second, int third) {
-        if (first > 0 && second > 0 && third > 0) {
-            int sumOfFirstSecond = first + second;
-            int sumOfSecondThird = third + second;
-            int sumOfFirstThird = first + third;
-            if (sumOfFirstSecond < third || sumOfSecondThird < first || sumOfFirstThird < second) {
-                System.out.println("Triangle is invalid.");
-            } else {
-                int perimeter = first + second + third;
-                double halfPerimeter = (double) (first + second + third) / 2;
-                double area = Math.sqrt(halfPerimeter * (halfPerimeter - first) * (halfPerimeter - second) * (halfPerimeter - third));
-                System.out.println("Triangle perimeter is " + perimeter + " and area is " + (int) area + ".");
-            }
+    private static void calculateTriangle(int first, int second, int third) {
+        if (isValidTriangle(first, second, third)) {
+            int perimeter = calculatePerimeter(first, second, third);
+            double area = calculateArea(first, second, third);
+            displayTriangleProperties(perimeter, area);
         } else {
-            System.out.println("Rectangle edge length can’t be 0 or below.");
+            displayInvalidTriangle();
         }
     }
 
-    public static void calculateSquare(int side) {
+    private static boolean isValidTriangle(int first, int second, int third) {
+        return first > 0 && second > 0 && third > 0 &&
+                first + second > third &&
+                second + third > first &&
+                first + third > second;
+    }
+
+    private static int calculatePerimeter(int... sides) {
+        int perimeter = 0;
+        for (int side : sides) {
+            perimeter += side;
+        }
+        return perimeter;
+    }
+
+    private static double calculateArea(int first, int second, int third) {
+        double halfPerimeter = calculatePerimeter(first, second, third) / 2.0;
+        return Math.sqrt(halfPerimeter * (halfPerimeter - first) * (halfPerimeter - second) * (halfPerimeter - third));
+    }
+
+    private static void displayTriangleProperties(int perimeter, double area) {
+        System.out.printf("Triangle perimeter is %d and area is %d.\n", perimeter, (int) area);
+    }
+
+    private static void displayInvalidTriangle() {
+        System.out.println("Triangle is invalid.");
+    }
+
+    private static void calculateSquare(int side) {
         if (side > 0) {
-            int perimeter = side * 4;
+            int perimeter = side * SIDES_OF_THE_SQUARE;
             int area = side * side;
-            System.out.println("Square perimeter is " + perimeter + " and area is " + area + ".");
+            System.out.printf("Square perimeter is %d and area is %d.\n", perimeter, area);
         } else {
             System.out.println("Square edge length can’t be 0 or below.");
         }
     }
 
-    public static String closeCalculator(Scanner sc) {
+    private static String closeCalculator(Scanner sc) {
         System.out.println("Do you want to run this calculator again? (yes/no)");
         String decision = sc.nextLine();
         return decision.equalsIgnoreCase("yes") ? "yes" : "no";

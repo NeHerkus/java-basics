@@ -3,6 +3,8 @@ package lt.itacademy.java.basics;
 import java.util.Scanner;
 
 public class Arithmetic {
+    public static final double FEET_EQUAL_INCHES = 12;
+    public static final double INCHES_EQUAL_CENTIMETERS = 2.54;
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -17,12 +19,12 @@ public class Arithmetic {
 //        Fourth task
         double feet = sc.nextDouble();
         double inches = sc.nextDouble();
+        sc.close();
         System.out.println(feet + " feet and " + inches + " inches = " + convertInchesToCentimetres(feet, inches) + " cm");
     }
 
-    public static double convertInchesToCentimetres(double feet, double inches) {
-        double convertedNumber;
-        inches += 12 * feet;
-        return (inches * 2.54);
+    private static double convertInchesToCentimetres(double feet, double inches) {
+        inches += FEET_EQUAL_INCHES * feet;
+        return (inches * INCHES_EQUAL_CENTIMETERS);
     }
 }
