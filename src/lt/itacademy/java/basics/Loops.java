@@ -12,6 +12,7 @@ public class Loops {
 //        Task 9
         int number = sc.nextInt();
         System.out.println(calculateFactorial(number));
+        sc.close();
     }
 
     public static void calculateTimeForLoop(int days) {

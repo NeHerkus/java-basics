@@ -32,7 +32,7 @@ public class Operators {
             System.out.println("Destination is in " + distance + "km. Car is not able to reach the destination. It needs " +
                     fuelNeeded + " liters of fuel more. " + "It will cost " + fuelNeededCost + ".");
         }
-
+        sc.close();
     }
 
     public static String calculateTriangle(int firstSide, int secondSide, int thirdSide) {

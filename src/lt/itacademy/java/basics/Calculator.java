@@ -33,6 +33,7 @@ public class Calculator {
                 }
             };
         } while (Objects.equals(decision, "yes"));
+        sc.close();
     }
 
     private static void handleRectangle(Scanner sc) {

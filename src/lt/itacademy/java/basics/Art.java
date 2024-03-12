@@ -7,6 +7,7 @@ public class Art {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
         printTriangleTree(number);
+        sc.close();
     }
 
     public static void printTriangleTree(int height) {

@@ -9,8 +9,8 @@ public class Basics {
         String name = sc.nextLine();
         String surname = sc.nextLine();
         int years = sc.nextInt();
-
-        System.out.println("Hello my name is " + name + " " + surname + " and I am " + years + " a years old. I am attending IT & Data Academy 2024!");
+        sc.close();
+        System.out.printf("Hello my name is %s %s and I am %d a years old. I am attending IT & Data Academy 2024!\n", name, surname, years);
 
 //      Second task
         char charValueH = 'H';
